@@ -1,7 +1,6 @@
 import json
 from django.http import HttpResponse
 from celery_progress.backend import Progress
-import simplejson
 
 
 def get_progress(request, task_id):
