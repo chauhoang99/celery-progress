@@ -62,7 +62,13 @@ class Progress(object):
                 'success': None,
                 'progress': _get_unknown_progress(),
             }
-        return self.result.info
+        else:
+            return {
+                'complete': False,
+                'success': None,
+                'progress': _get_unknown_progress(),
+            }
+        # return self.result.info
 
 
 def _get_completed_progress():
@@ -72,11 +78,10 @@ def _get_completed_progress():
         'percent': 100,
     }
 
+
 def _get_unknown_progress():
     {
         'current': 0,
         'total': 100,
         'percent': 0,
     }
-
-
