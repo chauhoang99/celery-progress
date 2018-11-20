@@ -16,7 +16,6 @@ var CeleryProgressBar = (function () {
     }
 
     function updateProgress (progressUrl, options) {
-        alert("celery_progress: updateProgress is running...");
         options = options || {};
         var progressBarId = options.progressBarId || 'progress-bar';
         var progressBarMessage = options.progressBarMessageId || 'progress-bar-message';
